@@ -1,0 +1,31 @@
+{
+  "type": "button",
+  "states": [
+    { "name": "unpressed", "isInitial": true },
+    { "name": "pressed" }
+  ],
+  "transitions": [
+    {
+      "from": "unpressed",
+      "to": "pressed",
+      "event": "click",
+      "action": "pressButton"
+    },
+    {
+      "from": "pressed",
+      "to": "unpressed",
+      "event": "click",
+      "action": "releaseButton"
+    }
+  ],
+  "actions": [
+    {
+      "name": "pressButton",
+      "execute": "activateButton"
+    },
+    {
+      "name": "releaseButton",
+      "execute": "deactivateButton"
+    }
+  ]
+}

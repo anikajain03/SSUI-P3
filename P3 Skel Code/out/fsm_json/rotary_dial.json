@@ -1,0 +1,54 @@
+{
+    "type": "rotaryDial",
+    "states": [
+      { "name": "neutral", "isInitial": true },
+      { "name": "position1" },
+      { "name": "position2" },
+      { "name": "position3" }
+    ],
+    "transitions": [
+      {
+        "from": "neutral",
+        "to": "position1",
+        "event": "rotate",
+        "action": "setToPosition1"
+      },
+      {
+        "from": "position1",
+        "to": "position2",
+        "event": "rotate",
+        "action": "setToPosition2"
+      },
+      {
+        "from": "position2",
+        "to": "position3",
+        "event": "rotate",
+        "action": "setToPosition3"
+      },
+      {
+        "from": "position3",
+        "to": "neutral",
+        "event": "rotate",
+        "action": "resetToNeutral"
+      }
+    ],
+    "actions": [
+      {
+        "name": "setToPosition1",
+        "execute": "rotateToPosition1"
+      },
+      {
+        "name": "setToPosition2",
+        "execute": "rotateToPosition2"
+      },
+      {
+        "name": "setToPosition3",
+        "execute": "rotateToPosition3"
+      },
+      {
+        "name": "resetToNeutral",
+        "execute": "rotateToNeutral"
+      }
+    ]
+}
+  

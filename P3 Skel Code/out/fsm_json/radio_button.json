@@ -1,0 +1,32 @@
+{
+    "type": "radio",
+    "states": [
+      { "name": "unselected", "isInitial": true },
+      { "name": "selected" }
+    ],
+    "transitions": [
+      {
+        "from": "unselected",
+        "to": "selected",
+        "event": "click",
+        "action": "select"
+      },
+      {
+        "from": "selected",
+        "to": "unselected",
+        "event": "click",
+        "action": "deselect"
+      }
+    ],
+    "actions": [
+      {
+        "name": "select",
+        "execute": "markRadioSelected"
+      },
+      {
+        "name": "deselect",
+        "execute": "unmarkRadioSelected"
+      }
+    ]
+}
+  

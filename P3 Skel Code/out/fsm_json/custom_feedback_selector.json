@@ -1,0 +1,129 @@
+{
+    "interactor": {
+      "type": "FSMInteractor",
+      "state": "neutral",
+      "states": [
+        {
+          "name": "feedback1",
+          "action": {
+            "type": "displayFeedback",
+            "message": "Feedback Level: 1 - Very Unsatisfied"
+          }
+        },
+        {
+          "name": "feedback2",
+          "action": {
+            "type": "displayFeedback",
+            "message": "Feedback Level: 2 - Unsatisfied"
+          }
+        },
+        {
+          "name": "feedback3",
+          "action": {
+            "type": "displayFeedback",
+            "message": "Feedback Level: 3 - Neutral"
+          }
+        },
+        {
+          "name": "feedback4",
+          "action": {
+            "type": "displayFeedback",
+            "message": "Feedback Level: 4 - Satisfied"
+          }
+        },
+        {
+          "name": "feedback5",
+          "action": {
+            "type": "displayFeedback",
+            "message": "Feedback Level: 5 - Very Satisfied"
+          }
+        },
+        {
+          "name": "neutral",
+          "action": {
+            "type": "displayFeedback",
+            "message": "Select your feedback level!"
+          }
+        }
+      ],
+      "transitions": [
+        {
+          "from": "neutral",
+          "to": "feedback1",
+          "event": "select1"
+        },
+        {
+          "from": "neutral",
+          "to": "feedback2",
+          "event": "select2"
+        },
+        {
+          "from": "neutral",
+          "to": "feedback3",
+          "event": "select3"
+        },
+        {
+          "from": "neutral",
+          "to": "feedback4",
+          "event": "select4"
+        },
+        {
+          "from": "neutral",
+          "to": "feedback5",
+          "event": "select5"
+        },
+        {
+          "from": "feedback1",
+          "to": "neutral",
+          "event": "resetFeedback"
+        },
+        {
+          "from": "feedback2",
+          "to": "neutral",
+          "event": "resetFeedback"
+        },
+        {
+          "from": "feedback3",
+          "to": "neutral",
+          "event": "resetFeedback"
+        },
+        {
+          "from": "feedback4",
+          "to": "neutral",
+          "event": "resetFeedback"
+        },
+        {
+          "from": "feedback5",
+          "to": "neutral",
+          "event": "resetFeedback"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "1",
+          "event": "select1"
+        },
+        {
+          "label": "2",
+          "event": "select2"
+        },
+        {
+          "label": "3",
+          "event": "select3"
+        },
+        {
+          "label": "4",
+          "event": "select4"
+        },
+        {
+          "label": "5",
+          "event": "select5"
+        },
+        {
+          "label": "Reset Feedback",
+          "event": "resetFeedback"
+        }
+      ]
+    }
+}
+  

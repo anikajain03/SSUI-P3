@@ -1,0 +1,32 @@
+{
+    "type": "checkbox",
+    "states": [
+      { "name": "unchecked", "isInitial": true },
+      { "name": "checked" }
+    ],
+    "transitions": [
+      {
+        "from": "unchecked",
+        "to": "checked",
+        "event": "click",
+        "action": "check"
+      },
+      {
+        "from": "checked",
+        "to": "unchecked",
+        "event": "click",
+        "action": "uncheck"
+      }
+    ],
+    "actions": [
+      {
+        "name": "check",
+        "execute": "markCheckbox"
+      },
+      {
+        "name": "uncheck",
+        "execute": "unmarkCheckbox"
+      }
+    ]
+}
+  
